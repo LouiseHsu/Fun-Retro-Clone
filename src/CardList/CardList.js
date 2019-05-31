@@ -7,16 +7,20 @@ class CardList extends Component {
   constructor (props) {
     super (props);
     this.state = {
-      cardArray: [<Card key = "0"/>]
+      cardArray: []
     }
   }
 
   onAddClick = () => {
     this.setState({
-      cardArray: [... this.state.cardArray, <Card id = "hi" key = {this.state.cardArray.length}/>]
+      cardArray: [... this.state.cardArray, <Card id = {"card" + this.state.cardArray.length-1} key = {this.state.cardArray.length-1}/>]
     })
-    let element = this.state.cardArray[this.state.cardArray.length-1];
-    // $(element).find('textarea').focus();
+  }
+
+  onDeleteClick = () => {
+    this.setState({
+      cardArray: [... this.state.cardArray, <Card id = "hi" key = {this.state.cardArray.length-1}/>]
+    })
   }
 
   render () {

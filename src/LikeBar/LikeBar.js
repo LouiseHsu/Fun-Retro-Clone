@@ -18,11 +18,10 @@ class LikeBar extends Component {
   render () {
     return (
       <div className = "LikeBar">
-                <button className = "LikeButton" onClick = {this.addLike}>Like</button>
-          <ul className = "LikeDisplay">
-            {this.state.likeArray}
-          </ul>
-
+        <button className = "LikeButton" onClick = {this.addLike}>Like</button>
+        <ul className = "LikeDisplay">
+          {this.state.likeArray}
+        </ul>
       </div>
     )
   }

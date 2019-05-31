@@ -15,6 +15,7 @@
 }
 .LikeDisplay > li {
   display: inline;
+  font-style: oblique;
 }
 .LikeButton {
   height: 25px;

@@ -1,9 +1,9 @@
 .Card {
   position: relative;
   width: 300px;
-  height: 100px;
+  height: 150px;
   margin-left: 50px;
-  margin-top: 10px;
+
   margin-bottom: 10px;
   background-color: #92e8df;
   text-align: center;
@@ -14,7 +14,7 @@
   width: 275px;
   margin: 10px;
   border-radius: 5px;
-  background-color: #92e8df;
+  background-color: rgba(0,0,0,0.05);
   border: none;
   resize: none;
 }
@@ -26,4 +26,16 @@
   background-color: white;
   border: none;
   resize: none;
+}
+.DeleteIcon{
+  position: absolute;
+  cursor: pointer;
+  border-radius: 100%;
+  background-color: #dddd;
+  color: rgba(0,0,0,0.2);
+  width: 16px;
+  height: 16px;
+  top: -5px;
+  left: -5px;
+  line-height:1em;
 }
