@@ -1,0 +1,8 @@
+.AddButton {
+  width: 300px;
+  height: 25px;
+  margin-top: 10px;
+  background-color: #dddd;
+  border-style: solid;
+  cursor: pointer;
+}

@@ -1,0 +1,27 @@
+.LikeBar {
+  position: absolute;
+  width: 300px;
+  display: inline-flex;
+  bottom: 10px;
+  left: 0;
+  float: right;
+  flex-direction: row-reverse;
+  text-align: center;
+}
+.LikeDisplay {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+}
+.LikeDisplay > li {
+  display: inline;
+}
+.LikeButton {
+  height: 25px;
+  align-self: flex-start;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #dddd;
+  border-style: solid;
+  cursor: pointer;
+}

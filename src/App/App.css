@@ -1,0 +1,11 @@
+.CardListContainer {
+  text-align: center;
+  display: inline-flex;
+  align-items: flex-start;
+}
+
+.flex-item {
+  flex-grow: 1;
+  align-self: flex-start;
+  flex-direction: column;
+}

@@ -1,0 +1,8 @@
+.CardList {
+  width: 400px;
+  border: 1px solid #dddd;
+  flex-grow: 1;
+  align-self: flex-start;
+  flex-direction: column;
+  text-align: center;
+}
