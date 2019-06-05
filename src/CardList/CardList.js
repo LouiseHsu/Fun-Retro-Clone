@@ -11,21 +11,31 @@ class CardList extends Component {
     }
   }
 
+  generateKey = (pre) => {
+      return `${ pre }_${ new Date().getTime() }`;
+  }
+
   onAddClick = () => {
     this.setState({
-      cardArray: [... this.state.cardArray, <Card id = {"card" + this.state.cardArray.length-1} key = {this.state.cardArray.length-1}/>]
+      cardArray: [... this.state.cardArray, <Card id = {(this.generateKey(this.state.cardArray.length)).toString()}
+                                                  key = {(this.generateKey(this.state.cardArray.length)).toString()}
+                                                  themeColour = {this.props.themeColour}
+                                                  onDeleteClick = {this.onDeleteClick}/>]
     })
   }
 
-  onDeleteClick = () => {
+  onDeleteClick = (i) => {
+    let newCardArray = this.state.cardArray.slice();
+    let index = newCardArray.findIndex(card => card.key === i);
+    newCardArray.splice(index, 1);
     this.setState({
-      cardArray: [... this.state.cardArray, <Card id = "hi" key = {this.state.cardArray.length-1}/>]
+      cardArray: newCardArray
     })
   }
 
   render () {
     return (
-      <div class = "CardList">
+      <div className = "CardList">
         <AddButton onClick = {this.onAddClick}/>
         {this.state.cardArray}
       </div>

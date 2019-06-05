@@ -1,26 +1,29 @@
 import React, {Component} from 'react';
 import './LikeBar.css';
+import Utils from '../Utils.js'
 
 class LikeBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      likeArray: []
+      numLikes: 0
     }
   }
 
   addLike = () => {
-    this.setState({
-      likeArray: [... this.state.likeArray, <li> &bull; </li>]
-    })
+    if (this.state.numLikes < 15) {
+      this.setState({
+        numLikes: this.state.numLikes + 1
+      })
+    }
   }
 
   render () {
     return (
       <div className = "LikeBar">
-        <button className = "LikeButton" onClick = {this.addLike}>Like</button>
+        <button className = "LikeButton" onClick = {this.addLike} >Like</button>
         <ul className = "LikeDisplay">
-          {this.state.likeArray}
+          {Utils.numToArray(this.state.numLikes, <span style={{color: "rgba(0,0,0,0.25)"}}>●</span>)}
         </ul>
       </div>
     )
