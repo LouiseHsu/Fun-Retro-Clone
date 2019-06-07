@@ -21,7 +21,7 @@ class LikeBar extends Component {
   render () {
     return (
       <div className = "LikeBar">
-        <button className = "LikeButton" onClick = {this.addLike} >Like</button>
+        <button className = "LikeButton" onClick = {this.addLike} disabled = {(this.state.numLikes == 15)}>Like</button>
         <ul className = "LikeDisplay">
           {Utils.numToArray(this.state.numLikes, <span style={{color: "rgba(0,0,0,0.25)"}}>●</span>)}
         </ul>

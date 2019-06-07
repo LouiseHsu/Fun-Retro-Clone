@@ -1,6 +1,6 @@
 .LikeBar {
   position: absolute;
-  width: 300px;
+  width: 100%;
   display: inline-flex;
   bottom: 10px;
   left: 0;
@@ -21,7 +21,7 @@
   height: 25px;
   align-self: flex-start;
   margin-left: 10px;
-  margin-right: 10px;
+  margin-right: 18px;
   background-color: #dddd;
   border-style: solid;
   cursor: pointer;
